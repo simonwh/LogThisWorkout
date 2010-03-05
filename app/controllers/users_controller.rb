@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
   
   def login
-    oauth.set_callback_url('http://localhost:3000/finalize_login')
+    oauth.set_callback_url(TWITTER_RETURN_URL)
     
     session['rtoken'] = oauth.request_token.token
     session['rsecret'] = oauth.request_token.secret

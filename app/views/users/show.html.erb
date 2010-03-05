@@ -1,0 +1,6 @@
+<h1>@<%= @user.screen_name %></h1>
+<h2>Latest workouts:</h2>
+
+<% @user.workouts.each do |workout| %>
+	<div><%= workout.message %> (<%= workout.created_at.strftime("%H:%m, %d/%m/%y")%>)</div>
+<% end %>

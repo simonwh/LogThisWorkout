@@ -1,0 +1,17 @@
+<% flash.each do |key, msg| %>
+<div class="<%= key %>"><%= msg %></div>
+<% end %>
+
+<div>
+<% if signed_in? %>
+<a href="/logout">Logout</a> | <%= link_to 'View profile', current_user %>
+<% else %>
+<a href="/login"><img src="/images/twitter_sign_in.png" /></a>
+<% end %>
+</div>
+
+<div>
+<% @workouts.each do |workout| %>
+	<div><a href="<%= user_path(workout.user) %>"<img src="<%= workout.user.profile_image_url %>"</a><%= workout.message %> (<%= time_ago_in_words(workout.created_at)%>)</div>
+<% end %>
+</div>

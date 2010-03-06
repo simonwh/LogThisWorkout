@@ -11,7 +11,8 @@
 
 ActiveRecord::Schema.define(:version => 20100301122643) do
 
-  create_table "users", :force => true do |t|
+  create_table "users", :id => false, :force => true do |t|
+    t.integer  "id", :limit => 8
     t.string   "screen_name"
     t.string   "profile_image_url"
     t.string   "atoken"
@@ -20,12 +21,13 @@ ActiveRecord::Schema.define(:version => 20100301122643) do
     t.datetime "updated_at"
   end
 
-  create_table "workouts", :force => true do |t|
+  create_table "workouts", :id => false, :force => true do |t|
+    t.integer  "id", :limit => 8
     t.text     "message"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "source"
-    t.string   "user_id"
+    t.integer  "user_id", :limit => 8
   end
 
 end

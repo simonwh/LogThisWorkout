@@ -1,11 +1,11 @@
 class ApplicationController < ActionController::Base
   include Twitter::AuthenticationHelpers
-  before_filter :force_www
+  before_filter :ensure_domain
   
   protect_from_forgery  
   helper :all
   
-  DOMAINWITHWWW = "http://www.logthisworkout.com"
+  DOMAIN = "logthisworkout.com"
   
   def is_owner
     if User.find_by_id(params[:id]) != current_user
@@ -14,9 +14,9 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  def force_www
-    if request.env['HTTP_HOST'] != DOMAINWITHWWW && RAILS_ENV == 'production'
-      redirect_to DOMAINWITHWWW
+  def ensure_domain
+    if request.env['HTTP_HOST'] != DOMAIN && RAILS_ENV == 'production'
+      redirect_to DOMAIN
     end
   end
 end

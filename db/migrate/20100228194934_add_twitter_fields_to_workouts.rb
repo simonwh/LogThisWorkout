@@ -1,7 +1,7 @@
 class AddTwitterFieldsToWorkouts < ActiveRecord::Migration
   def self.up
     add_column :workouts, :source, :string
-    add_column :workouts, :user_id, :string
+    add_column :workouts, :user_id, :integer
   end
 
   def self.down

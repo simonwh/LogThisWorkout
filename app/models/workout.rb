@@ -5,10 +5,10 @@ class Workout < ActiveRecord::Base
   def send_response
     if self.user.workouts.count == 1
       update_string = "@#{self.user.screen_name} Welcome to LogThisWorkout! Check out logthisworkout.com to view your workouts."
-      Workout.client.update(update_string) #, { :in_reply_to_status_id => self.id })
+      Workout.client.update(update_string , { :in_reply_to_status_id => self.id })
     else
       update_string = "@#{self.user.screen_name} Your workout has been logged - #{self.created_at.strftime('%H:%M')}"
-      Workout.client.update(update_string) #, { :in_reply_to_status_id => self.id })
+      Workout.client.update(update_string, { :in_reply_to_status_id => self.id })
     end
   end
   

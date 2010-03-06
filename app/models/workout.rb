@@ -28,7 +28,7 @@ class Workout < ActiveRecord::Base
   
   def self.new_from_tweet(workout_tweet)
     new_workout = Workout.new
-    #new_workout.id = workout_tweet.id
+    new_workout.id = workout_tweet.id
     new_workout.message = Workout.remove_user_from_message(workout_tweet.text)
     new_workout.source = workout_tweet.source
     new_workout.user_id = workout_tweet.user.id

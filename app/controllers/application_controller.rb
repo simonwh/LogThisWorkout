@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery  
   helper :all
   
-  DOMAINWITHWWW = "www.logthisworkout.com"
+  DOMAINWITHWWW = "http://www.logthisworkout.com"
   
   def is_owner
     if User.find_by_id(params[:id]) != current_user

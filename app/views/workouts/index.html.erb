@@ -12,6 +12,6 @@
 
 <div>
 <% @workouts.each do |workout| %>
-	<div><a href="<%= user_path(workout.user) %>"<img src="<%= workout.user.profile_image_url %>"</a><%= workout.message %> (<%= time_ago_in_words(workout.created_at)%>)</div>
+	<div><a href="<%= user_path(workout.user) %>"><img src="<%= workout.user.profile_image_url %>"</a><%= workout.message %> (<%= time_ago_in_words(workout.created_at)%>)</div>
 <% end %>
 </div>

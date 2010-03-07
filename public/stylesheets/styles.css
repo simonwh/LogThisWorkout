@@ -10,17 +10,13 @@ img {
 .container_12
 {
 	background: #008214 url("/images/bg.png") no-repeat;
+	min-height: 1000px;
 }
 
 .message
 {
 	margin-top: 100px;
 	text-align: center;
-}
-
-.content {
-	margin-top: 20px;
-	min-height: 1000px;
 }
 
 .msg
@@ -85,11 +81,96 @@ img {
 	float: left;
 }
 
+.user_latest_workout
+{
+	background-color: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	padding: 6px;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.user_latest_workout span
+{
+	color: #000;
+	float: left;
+	margin-right: 20px;
+}
+
+.user_latest_workout p
+{
+	color: #999;
+}
+
+.user_latest_workout a
+{
+	text-decoration: none;
+}
+
 h1
 {
 	color: #fff;
 	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+h2
+{
+	color: #fff;
+	font-size: 18px;
 	margin-bottom: 5px;
+}
+
+#month_calender
+{
+	background-color: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	padding: 20px 0px 10px 20px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	min-height: 235px;
+}
+
+#month_calender ul
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#month_calender li
+{
+	background-color: #def3e4;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	font-size: 28px;
+	min-width: 35px;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+#month_calender li.yes
+{
+	color: #177b1c;
+	background-color: #def3e4;
+}
+
+#month_calender li.no
+{
+	color: #cf2a2a;
+	background-color: #fec5c5;
 }
 
 .awesome, .awesome:visited {

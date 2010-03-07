@@ -1,5 +1,5 @@
 Logthisworkout::Application.routes.draw do |map|
-  
+  match 'users/:id/:date' => 'users#at_date'
   match 'logout' => 'users#logout'
   match 'finalize_login' => 'users#finalize_login'
   match 'login' => 'users#login'  

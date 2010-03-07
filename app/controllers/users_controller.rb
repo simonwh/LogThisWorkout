@@ -38,6 +38,12 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
   
+  def at_date
+    @user = User.find(params[:id])
+    @date = Date.strptime(params[:date], "%d%m%y")
+    @workouts = @user.workouts.at_date(@date)
+  end
+  
   private
     def oauth
       @oauth ||= Twitter::OAuth.new(CONSUMER_KEY, CONSUMER_SECRET, :sign_in => true)

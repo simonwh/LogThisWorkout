@@ -1,6 +1,7 @@
 class Workout < ActiveRecord::Base
   belongs_to :user
   scope :recent, lambda { |arg| where('created_at > ?', Time.now - arg[:hours].hours).order('created_at desc').limit(arg[:limit]) }
+  scope :at_date, lambda { |date| where('created_at > ? AND created_at < ?', date.strftime("%Y-%m-%d"), (date + 1.day).strftime("%Y-%m-%d"))}
   
   def send_response
     if self.user.workouts.count == 1

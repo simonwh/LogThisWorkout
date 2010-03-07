@@ -1,0 +1,4 @@
+<h2>Your latest workouts</h2>
+<% workouts.each do |workout| %>
+	<div class="user_latest_workout"><a href="<%= workout_path(workout) %>"><span><%= workout.created_at.strftime("%d/%m/%y - %H:%M") %></span><p><%= workout.message.slice!(0..30) %></p></a></div>
+<% end %>

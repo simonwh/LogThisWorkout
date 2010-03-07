@@ -1,0 +1,36 @@
+<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<%= stylesheet_link_tag :all, :cache => true %>
+<head>
+	<title>LogThisWorkout</title>
+</head>
+<body>
+	<div class="container_12">
+		<div class="container_12">
+			<div class="grid_12">
+				<div id="session">
+					<% if signed_in? %>
+						 <a href="/">Home</a> | <%= link_to 'View profile', current_user %> | <a href="/logout">Logout</a>
+					<% else %>
+						<a href="/login"><img src="/images/twitter_sign_in.png" /></a>
+					<% end %>
+				</div>
+			</div>
+			
+			<div class="clear"></div>
+			<div class="grid_12 message">
+				<% flash.each do |key, msg| %>
+					<div class="msg <%= key %>"><%= msg %></div>
+				<% end %>
+			</div>
+
+			<div class="grid_12 content">
+				<%= yield %>
+			</div>
+		
+			<div class="clear"></div>
+		</div>
+	</div>
+</body>
+</html>

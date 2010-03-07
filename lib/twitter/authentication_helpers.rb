@@ -57,7 +57,7 @@ module Twitter
  
         def deny_access(flash_message = nil, opts = {})
           store_location
-          flash[:alert] = "You do not have permissions that page."
+          flash[:alert] = "You don't have permissions to view that page."
           redirect_to root_path
         end
     end

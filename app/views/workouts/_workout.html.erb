@@ -1,0 +1,1 @@
+<div class="workout"><a href="<%= user_path(workout.user) %>"><img src="<%= workout.user.profile_image_url %>"</a><span class="workout_text"><p><%= workout.message %> (<%= workout.created_at.strftime("%d/%m/%y %H:%M") %> - <%= time_ago_in_words(workout.created_at)%> ago)</p></span></div>

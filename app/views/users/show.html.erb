@@ -1,6 +1,6 @@
 <h1>@<%= @user.screen_name %></h1>
 <div class="grid_8">
-	<%= render :partial => 'week_calender', :locals => { :workouts => @user.workouts } %>
+	<%= render :partial => 'month_calender', :locals => { :workouts => @user.workouts } %>
 </div>
 <div class="grid_4">
 	<%= render :partial => 'user_latest_workouts', :locals => { :workouts => @user.workouts.order('created_at desc').limit(10) } %>

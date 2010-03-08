@@ -15,7 +15,7 @@ img {
 
 .message
 {
-	margin-top: 100px;
+	margin: 90px 0 20px 0;
 	text-align: center;
 }
 
@@ -139,7 +139,15 @@ h2
 	padding: 20px 0px 10px 20px;
 	margin-bottom: 10px;
 	font-size: 12px;
-	min-height: 235px;
+	height: 265px;
+}
+
+#month_calendar h2
+{
+	color: #333;
+	font-weight: normal;
+	font-size: 22px;
+	margin-bottom: 10px;
 }
 
 #month_calendar ul
@@ -176,6 +184,18 @@ h2
 {
 	color: #cf2a2a;
 	background-color: #fec5c5;
+}
+
+#profile_box
+{
+    background-color: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	padding: 6px;
+	height: 50px;
+	margin-bottom: 10px;
 }
 
 #profile_box img

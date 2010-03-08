@@ -129,7 +129,7 @@ h2
 	margin-bottom: 5px;
 }
 
-#month_calender
+#month_calendar
 {
 	background-color: #fff;
 	-moz-border-radius: 5px;
@@ -142,14 +142,14 @@ h2
 	min-height: 235px;
 }
 
-#month_calender ul
+#month_calendar ul
 {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
 
-#month_calender li
+#month_calendar li
 {
 	background-color: #def3e4;
 	-moz-border-radius: 5px;
@@ -166,13 +166,13 @@ h2
 }
 
 
-#month_calender li.yes
+#month_calendar li.yes
 {
 	color: #177b1c;
 	background-color: #def3e4;
 }
 
-#month_calender li.no
+#month_calendar li.no
 {
 	color: #cf2a2a;
 	background-color: #fec5c5;

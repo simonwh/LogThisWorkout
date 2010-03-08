@@ -81,6 +81,11 @@ img {
 	float: left;
 }
 
+.remove_btn
+{
+	float: right;
+}
+
 .user_latest_workout
 {
 	background-color: #fff;

@@ -1,0 +1,20 @@
+- Badges/achievements-system
+Belønnes når man har opnået noget:
+* Trænet 3 gange på en uge over en måned
+* Trænet 5 dage i træk
+* Logget x-antal workouts
+
+One achievment has many conditions
+
+
+Achievement
+name:string
+description:string
+
+
+Condition
+name:string
+x_times:integer
+x_times_in_a_week:integer
+x_times_in_a_month:integer
+x_times_in_row:integer

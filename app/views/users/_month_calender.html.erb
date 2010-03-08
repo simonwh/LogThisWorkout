@@ -2,7 +2,7 @@
 <div id="month_calender">
 	<ul>
 		<% Time.now.beginning_of_month.to_date.step(Time.now.end_of_month.to_date, 1.day) do |day| %>
-			<li class="<%=calender_item_class(day) %>"><span class="<%= day.strftime('%d%m%y') %>"><%= day.day %></span></li>
+			<li class="<%=calender_item_class(@user, day) %>"><span class="<%= day.strftime('%d%m%y') %>"><%= day.day %></span></li>
 		<% end %>
 	</ul>
 </div>
